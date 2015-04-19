@@ -1,2 +1,11 @@
-Archivo suplementario para la actualización de códigos, esto para
-no afectar los programas ya terminados.
+Rama suplementaria para la actualización de códigos, esto para
+no afectar los programas ya terminados. Es una pequeña sugerencia.
+
+También hay que checar la forma en que ordenamos los programas. A mi
+parecer debe haber una carpeta para los ejercicios y otra para los
+programas de ejemplo (e.g. arrays.c, temperatures.c, ...) sino va
+a ser un desastre. 
+
+Es mi opinión, pero si es necesario una organización más estricta.
+
+ATTE. Alex ;)
