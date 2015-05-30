@@ -10,31 +10,23 @@ void copy(char to[], char from[]);
 int main()
 {
 	int len;		/* Current line length */
-	int i;		/* Used as iterator */
-	int flf;	/* First letter found */
+	int i, j;		/* Used as iterator */
 	char line[MAXLINE];		/* Current input line */
 
-	flf = 0;
-	i = 0;
 	while ((len = getline(line, MAXLINE)) > 0)
 	{
-		while (i < len)		/* Loop to encounter tabs, blanks or newline characters */
+        i = len;
+		while (j < i)		/* Loop to encounter tabs, blanks or newline characters */
 		{
-			if (line[i] == '\t' && flf == 0)
-				i++;
-			else if (line[i] == '\n' && flf == 0)
-				i++;
-			else if (line[i] == ' ' && flf == 0)
-				i++;
+			if (line[i] == '\t' || line[i] == ' ' || line[i] == '\n')
+				--i;
 			else
 			{
-				printf("%c", line[i]);
-				flf = 1;	/* First letter found inside corresponding line */
-				i++;
+                printf("%c", line[j]);
+                ++j;    
 			}		
 		}
-		flf = 0;
-		i = 0;
+        j=0;
 	}
 	return 0;
 }

@@ -41,10 +41,8 @@ void reverse (char l[], int s)
 	int i, len;
 	char as[s];
 	
-	len = 0;
+	len = s;
 	copy(as, l);
-	while (as[len] != '\0')		// Obtain the length of line, in case it is
-		len++;					// not correct 
 	for (i = 0; i < len; i++)
 		l[i] = as[len-1-i];
 	l[i] = '\0';
